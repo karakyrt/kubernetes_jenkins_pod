@@ -22,3 +22,5 @@ spec:
             name: jenkins-pod
       volumes:
         - name: jenkins-pod
+          persistentVolumeClaim:
+            claimName: jenkins-pod
