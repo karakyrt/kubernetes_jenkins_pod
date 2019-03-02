@@ -16,4 +16,9 @@ spec:
       - name: jenkins
         image: jenkins/jenkins:lts
         ports:
-        - containerPort: 8080  
+        - containerPort: 8080
+        volumeMounts:
+          - mountPath: /var/jenkins
+            name: jenkins-pod
+      volumes:
+        - name: jenkins-pod
